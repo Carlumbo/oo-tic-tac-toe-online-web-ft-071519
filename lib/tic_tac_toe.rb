@@ -56,7 +56,7 @@ class TicTacToe
    
     def turn
         puts "Please enter 1-9:"
-        input = gets.strip
+        input = gets.chomp
         index = input_to_index(input)
         token = current_player
         if valid_move?(index)
@@ -113,10 +113,3 @@ class TicTacToe
         end
     end
 end 
-
-bin/tictactoe
-require 'pry'
-require_relative '../lib/tic_tac_toe.rb'
-
-game = TicTacToe.new
-game.play
